@@ -1,4 +1,4 @@
-# training02
+# DotGenerator
 
 ## Project setup
 ```
