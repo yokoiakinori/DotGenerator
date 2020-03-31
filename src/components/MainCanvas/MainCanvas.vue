@@ -1,7 +1,9 @@
 <template>
-  <ul id="MainCanvas">
-    <Dot v-for="item in 300" v-bind:key="item" v-bind:width="20" v-bind:height="20"></Dot>
-  </ul>
+  <div id="MainCanvas">
+    <ul>
+      <Dot v-for="item in allCanvasDot" v-bind:key="item"></Dot>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -10,7 +12,10 @@ export default{
   components:{
     Dot
   },
-  methods:{
+  computed:{
+    allCanvasDot: function(){
+      return this.$store.state.lineDotVolume**2
+    }
   }
 }
 </script>
@@ -18,13 +23,23 @@ export default{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #MainCanvas{
-  width: 600px;
-  height: 400px;
+  width: 70%;
+  height: calc(70vw);
   background-color: #cfcfcf;
   display: flex;
-  list-style-type: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  ul{
+    width: 90%;
+    height: 90%;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
 }
 </style>

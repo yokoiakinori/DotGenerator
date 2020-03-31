@@ -36,12 +36,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+div{
+  width: 30%;
+}
 .palet{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 180px;
-  height: px;
+  height: 400px;
   background-color: #cfe8cf;
   padding: 20px;
 }

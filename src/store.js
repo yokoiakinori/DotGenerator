@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state:{
-        drawingColor:'black'
+        drawingColor:'black',
+        lineDotVolume:30
     },
     mutations:{
         drawingColor(state,payload){

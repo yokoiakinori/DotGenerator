@@ -19,5 +19,7 @@ import MainCanvas from "./components/MainCanvas/MainCanvas.vue"
 <style lang="scss" scoped>
 #app{
   display: flex;
+  box-sizing:border-box;
+  width: 100%;
 }
 </style>
