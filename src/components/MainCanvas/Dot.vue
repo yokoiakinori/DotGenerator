@@ -1,20 +1,28 @@
 <template>
-  <li v-bind:style="dotStyle" @click="draw">
+  <li v-bind:style="dotStyle" @click="draw" @mousemove="dragDraw">
   </li>
 </template>
 
 <script>
 export default{
+  props:{
+    drawingJudgement:Boolean
+  },
   data(){
     return{
       dotStyle:{
         backgroundColor:'white',
         width:0,
         height:0
-      }
+      },
     }
   },
   methods:{
+    dragDraw(){
+      if(this.drawingJudgement){
+        this.draw()
+      }
+    },
     draw(){
       this.dotStyle.backgroundColor=this.$store.state.drawingColor
     },

@@ -1,25 +1,37 @@
 <template>
   <div id="app">
-    <MainCanvas></MainCanvas>
-    <ColorPalet></ColorPalet>
+    <nav>
+      <router-link to="/" exact>HOME</router-link>
+      <router-link to="/user/:id">描く</router-link>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ColorPalet from "./components/colorpalet/ColorPalet.vue"
-import MainCanvas from "./components/MainCanvas/MainCanvas.vue"
-  export default{
-    components:{
-      ColorPalet,
-      MainCanvas
-    }
-  }
+
 </script>
 
 <style lang="scss" scoped>
-#app{
-  display: flex;
+nav{
   box-sizing:border-box;
   width: 100%;
+  background-color: black;
+  height: 60px;
+  display: flex;
+  a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: white;
+    &:hover{
+      color:#c9c1be ;
+    }
+  }
+}
+.router-link-active{
+  background:#434242 ;
 }
 </style>

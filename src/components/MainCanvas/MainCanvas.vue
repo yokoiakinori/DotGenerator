@@ -1,7 +1,7 @@
 <template>
   <div id="MainCanvas">
     <ul>
-      <Dot v-for="item in allCanvasDot" v-bind:key="item"></Dot>
+      <Dot v-for="item in allCanvasDot" v-bind:key="item" v-bind:drawingJudgement="drawingJudgement" @mousedown.native="dragStart" @mouseup.native="dragEnd"></Dot>
     </ul>
   </div>
 </template>
@@ -12,10 +12,23 @@ export default{
   components:{
     Dot
   },
+  data(){
+    return{
+      drawingJudgement:false
+    }
+  },
   computed:{
     allCanvasDot: function(){
       return this.$store.state.lineDotVolume**2
     }
+  },
+  methods:{
+    dragStart(){
+      this.drawingJudgement=true
+    },
+    dragEnd(){
+      this.drawingJudgement=false
+    },
   }
 }
 </script>
