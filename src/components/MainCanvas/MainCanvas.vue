@@ -36,8 +36,8 @@ export default{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #MainCanvas{
-  width: 70%;
-  height: calc(70vw);
+  width: 60%;
+  height: 60vw;
   background-color: #cfcfcf;
   display: flex;
   justify-content: center;

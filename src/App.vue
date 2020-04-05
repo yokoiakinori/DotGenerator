@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/" exact>HOME</router-link>
-      <router-link to="/user/:id">描く</router-link>
+      <router-link to="/user/:id/1">描く</router-link>
     </nav>
     <router-view></router-view>
   </div>

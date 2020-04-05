@@ -1,5 +1,6 @@
 <template>
   <div id="MyDrawing">
+    <router-view></router-view>
     <MainCanvas></MainCanvas>
     <ColorPalet></ColorPalet>
   </div>
@@ -12,7 +13,8 @@ import MainCanvas from "../components/MainCanvas/MainCanvas.vue"
     components:{
       ColorPalet,
       MainCanvas
-    }
+    },
+    props:{name:String}
   }
 </script>
 
